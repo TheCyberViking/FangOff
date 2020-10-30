@@ -17,3 +17,12 @@ Run the exe you will get a popup box, enter the URL and click De-Fang to defang 
 
 ## How to Run Linux
 Run the python script, you will get a popup box, enter the URL and click De-Fang to defang the URL. Enter the URl and Click Re-Fang to add the fangs bank into the file
+
+## What it will do
+Defang URLs, Email address, and IP address
+
+| Input  | Output  |
+|---|---|
+| cyberviking@thecyberviking.com  |  cyberviking[AT]thecyberviking[.]com  |
+| https://www.thecyberviking.com/ | hxxps://thecyberviking[.]com/  |
+| 127.0.0.1  | 127[.]0[.]0[.]1  |
