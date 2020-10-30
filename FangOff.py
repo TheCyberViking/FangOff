@@ -1,14 +1,23 @@
 import tkinter as tk
 
+fang_mapping = {
+    ".": "[.]",
+    "http": "hxxp",
+    "https":"hxxps",
+    "@": "[AT]"
+}
+
 def defang(url):
-    str1 = url.replace(".", "[.]").replace("http", "hxxp").replace("https", "hxxps").replace("@", "[AT]")
+    out_string = [a_url]
+    [out_string.append(out_string[-1].replace(value, key)) for key,value in fang_mapping.items()]
     master.clipboard_clear()
-    master.clipboard_append(str1)
+    master.clipboard_append(out_string[-1])
 
 def fang(url):
-    str1 = url.replace("[.]", ".").replace("hxxps", "https").replace("hxxp", "http").replace("[AT]", "@")
+    out_string = [a_url]
+    [out_string.append(out_string[-1].replace(key, value)) for key,value in fang_mapping.items()]
     master.clipboard_clear()
-    master.clipboard_append(str1)
+    master.clipboard_append(out_string[-1])
 
 master = tk.Tk()
 master.title("FangOff by @TheCyberViking")
