@@ -26,3 +26,7 @@ Defang URLs, Email address, and IP address
 | cyberviking@thecyberviking.com  |  cyberviking[AT]thecyberviking[.]com  |
 | https://www.thecyberviking.com/ | hxxps://thecyberviking[.]com/  |
 | 127.0.0.1  | 127[.]0[.]0[.]1  |
+
+
+# Changelog
+version 1.5 - added functionaly to De-Fang Re-Fang a text file
