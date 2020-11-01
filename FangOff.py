@@ -1,18 +1,31 @@
 import tkinter as tk
-from tkinter.filedialog import askopenfile, askopenfilename
+from tkinter.filedialog import askopenfilename
 
 global filename
 filename = ""
 
+fang_mapping = {
+    ".": "[.]",
+    "http": "hxxp",
+    "https":"hxxps",
+    "@": "[AT]"
+}
+
 def defang(url, clip=True):
-    str1 = url.replace(".", "[.]").replace("http", "hxxp").replace("https", "hxxps").replace("@", "[AT]")
+    str1 = url
+    for k, v in fang_mapping.items():
+        str1 = str1.replace(k, v)
+
     if clip:
         master.clipboard_clear()
         master.clipboard_append(str1)
     return str1
 
 def fang(url, clip=True):
-    str1 = url.replace("[.]", ".").replace("hxxps", "https").replace("hxxp", "http").replace("[AT]", "@")
+    str1 = url
+    for k, v in fang_mapping.items():
+        str1 = str1.replace(v, k)
+    
     if clip:
         master.clipboard_clear()
         master.clipboard_append(str1)
