@@ -38,3 +38,6 @@ Defang URLs, Email addresses, and IP addresses
 ## Changelog
 
 version 1.5 - added functionaly to De-Fang Re-Fang a text file
+
+## Thanks
+Major thanks to AtomicNicos for helping out with some issues I was having
