@@ -105,7 +105,7 @@ def open_url(url):
 def run_gui():
     #set up main ui and sizing
     master = tk.Tk()
-    master.title("FangOff by @TheCyberViking version: 1.6")
+    master.title("FangOff by @TheCyberViking version: 1.5")
     initial_size, min_x, min_y = set_initial_size()
     master.geometry(initial_size)
     master.minsize(min_x, min_y)
